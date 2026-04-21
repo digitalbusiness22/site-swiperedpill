@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b0f14;
+  color: #f5f7fa;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 80px 0 48px;
+  background: linear-gradient(180deg, #08110a 0%, #0b0f14 100%);
+  border-bottom: 1px solid rgba(95, 255, 120, 0.15);
+}
+
+.badge {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 8px 12px;
+  border: 1px solid #39ff6a;
+  border-radius: 999px;
+  color: #39ff6a;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(36px, 6vw, 64px);
+  line-height: 1;
+}
+
+.subtitle {
+  max-width: 700px;
+  font-size: 18px;
+  color: #c7d2db;
+  margin-bottom: 24px;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 10px;
+  background: #39ff6a;
+  color: #08110a;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main {
+  display: grid;
+  gap: 20px;
+  padding: 36px 0 56px;
+}
+
+.card {
+  background: #111821;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+.footer {
+  padding: 24px 0 40px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #98a6b3;
+  font-size: 14px;
+}
