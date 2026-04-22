@@ -1,49 +1,282 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Swipe Red Pill — Suporte</title>
-  <meta name="description" content="Amanhã é NeyDay HAHAHA." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swipe Red Pill - As ofertas mais escaladas do digital</title>
+  <meta name="description" content="Saia da Matrix e ganhe dinheiro modelando os Big Players do mercado. Acompanhe as campanhas que realmente dão lucro e economize meses de testes.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <p class="badge">SUPORTE OFICIAL</p>
-      <h1>Swipe Red Pill</h1>
-      <p class="subtitle">Estamos atendendo provisoriamente por este canal (lá ele) oficial.</p>
-      <a class="button" href="mailto:suporte@swiperedpill.com">Falar com o suporte</a>
+  <!-- Matrix Background Canvas -->
+  <canvas id="matrix-bg"></canvas>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-content">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Swipe <span class="text-red">Red Pill</span></span>
+      </a>
+      
+      <nav class="nav-desktop">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="header-buttons">
+        <a href="#planos" class="btn btn-primary btn-sm">Quero ser membro</a>
+        <a href="https://app.swiperedpill.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Entrar</a>
+      </div>
+
+      <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu">
+        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg class="close-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden" id="mobile-menu">
+      <nav class="mobile-nav">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="mobile-buttons">
+        <a href="#planos" class="btn btn-primary">Quero ser membro</a>
+        <a href="https://app.swiperedpill.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Entrar</a>
+      </div>
     </div>
   </header>
 
-  <main class="container main">
-    <section class="card">
-      <h2>Contato</h2>
-      <p><strong>Email:</strong> suporte@swiperedpill.com</p>
-      <p><strong>Atendimento:</strong> segunda a sexta, das 9h às 18h</p>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-tag">Saia da Matrix</p>
+          <h1 class="hero-title">As ofertas mais escaladas do digital disponíveis na sua mão em tempo real</h1>
+          <p class="hero-description">Saia da Matrix e ganhe dinheiro modelando os Big Players do mercado. Acompanhe as campanhas que realmente dão lucro e economize meses de testes.</p>
+          <a href="#planos" class="btn btn-primary btn-glow">Quero ser membro</a>
+        </div>
+        <div class="hero-video">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/MBPbghZd3Wc?si=ivuXHwsdAeF0YRr1&controls=0" 
+              title="Swipe Red Pill - Vídeo de apresentação"
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Como podemos ajudar</h2>
-      <ul>
-        <li>Dúvidas sobre acesso</li>
-        <li>Problemas com login</li>
-        <li>Questões sobre assinatura</li>
-        <li>Suporte geral da plataforma</li>
-      </ul>
+    <!-- Categories Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Modele qualquer mercado do digital</h2>
+        <div class="categories-grid">
+          <div class="category-card">
+            <svg class="category-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.5 20H4a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2h3.93a2 2 0 0 1 1.66.9l.82 1.2a2 2 0 0 0 1.66.9H20a2 2 0 0 1 2 2v2M12 19l-3-3 3-3M19 13v9M22 16l-3-3-3 3"/></svg>
+            <span>Nutra Internacional</span>
+          </div>
+          <div class="category-card">
+            <svg class="category-icon blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            <span>Info Internacional</span>
+          </div>
+          <div class="category-card">
+            <svg class="category-icon yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M21 9l-5 5-4-4-3 3"/></svg>
+            <span>Low Ticket Internacional</span>
+          </div>
+          <div class="category-card">
+            <svg class="category-icon pink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13M9 9l12-2"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+            <span>TikTok Shop</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Aviso</h2>
-      <p>Esta é uma página provisória de suporte da Swipe Red Pill enquanto a infraestrutura principal está sendo ajustada.</p>
+    <!-- Benefits Section -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Benefícios</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <span class="benefit-tag">Cloaker Quebrado</span>
+            <h3 class="benefit-title">Acesso às ofertas mais lucrativas</h3>
+            <p class="benefit-description">Veja o que está escalando agora e entre antes da multidão.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="benefit-tag">Modelagem</span>
+            <h3 class="benefit-title">Modele funis validados</h3>
+            <p class="benefit-description">Economize meses de testes analisando funis validados que escalam milhões.</p>
+          </div>
+          <div class="benefit-card">
+            <span class="benefit-tag">Atualização</span>
+            <h3 class="benefit-title">Swipe atualizado todos os dias</h3>
+            <p class="benefit-description">Conteúdo sempre atualizado com avisos em tempo real.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <h2 class="section-title">Como funciona?</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-number">1.</span>
+              <h3 class="step-title">Entre</h3>
+            </div>
+            <p class="step-description">Você terá acesso ao nosso Grupo Premium e Swipe instantaneamente.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-number">2.</span>
+              <h3 class="step-title">Analise</h3>
+            </div>
+            <p class="step-description">Veja os funis secretos dos Big Players e estude as estruturas.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-header">
+              <span class="step-number">3.</span>
+              <h3 class="step-title">Modele & Lucre</h3>
+            </div>
+            <p class="step-description">Implemente rápido e monetize sem testes cegos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section" id="planos">
+      <div class="container">
+        <h2 class="section-title">Planos</h2>
+        <div class="pricing-grid">
+          <!-- Monthly Plan -->
+          <div class="pricing-card">
+            <span class="plan-name green">Mensal</span>
+            <div class="plan-price">
+              <span class="price">R$97</span>
+              <span class="period">/mês</span>
+            </div>
+            <ul class="plan-features">
+              <li>Acesso ao Swipe completo</li>
+              <li>Grupo premium de avisos</li>
+            </ul>
+            <a href="https://checkout.payt.com.br/6bfe98ffa52b44639a4cf65c55adbe41" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Assinar Mensal</a>
+          </div>
+          <!-- Annual Plan (Featured) -->
+          <div class="pricing-card featured">
+            <span class="plan-name red">Anual</span>
+            <div class="plan-price">
+              <span class="price">R$89</span>
+              <span class="period">/mês</span>
+            </div>
+            <p class="plan-discount">R$ 857 à vista (economize 26%)</p>
+            <ul class="plan-features">
+              <li>Acesso ao Swipe completo</li>
+              <li>Grupo premium de avisos</li>
+              <li>Bônus avançados</li>
+              <li>Comunidade [Em breve]</li>
+            </ul>
+            <a href="https://checkout.payt.com.br/9a6e612aa4752d4967fd08f96c3f7424" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Assinar Anual</a>
+          </div>
+          <!-- Semester Plan -->
+          <div class="pricing-card">
+            <span class="plan-name green">Semestral</span>
+            <div class="plan-price">
+              <span class="price">R$94</span>
+              <span class="period">/mês</span>
+            </div>
+            <p class="plan-discount">R$ 497 à vista (economize 15%)</p>
+            <ul class="plan-features">
+              <li>Acesso ao Swipe completo</li>
+              <li>Grupo premium de avisos</li>
+              <li>Bônus avançados</li>
+            </ul>
+            <a href="https://checkout.payt.com.br/8975849dc544b669b37b1877b40d9685" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Assinar Semestral</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+      <div class="container container-sm">
+        <h2 class="section-title">Perguntas frequentes</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span><span class="faq-arrow">▸</span> Posso cancelar quando quiser?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Sim! Você pode cancelar sua assinatura a qualquer momento. Basta entrar em contato conosco pelo suporte ou através do painel do cliente. Não há multas ou taxas de cancelamento.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span><span class="faq-arrow">▸</span> O que está incluído?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Você terá acesso completo ao Swipe Red Pill com todas as ofertas escaladas do mercado internacional, grupo premium de avisos em tempo real, acesso a funis validados e, dependendo do seu plano, bônus exclusivos e acesso à comunidade.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span><span class="faq-arrow">▸</span> Como recebo acesso?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Após a confirmação do pagamento, você receberá automaticamente um email com suas credenciais de acesso. O processo é instantâneo e você já pode começar a usar a plataforma imediatamente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+      <div class="container container-sm">
+        <div class="cta-card">
+          <h2 class="cta-title">Pronto para sair da Matrix?</h2>
+          <p class="cta-description">Entre agora e veja o que os Big Players não mostram.</p>
+          <a href="#planos" class="btn btn-primary btn-glow">Quero ser membro agora</a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Swipe Red Pill. Todos os direitos reservados.</p>
+    <div class="container footer-content">
+      <a href="#" class="logo">
+        <span class="logo-dot"></span>
+        <span class="logo-text">Swipe <span class="text-red">Red Pill</span></span>
+      </a>
+      <div class="footer-links">
+        <span>&copy; 2026 Swipe Red Pill</span>
+        <span class="footer-separator">&bull;</span>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+      </div>
     </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
